@@ -1,22 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package oop.CycleWork;
-
-/**
- *
- * @author user
- */
-public class Customer {
+class Customer {
     private String kode_customer;
     private String nama_customer;
     private String nomor_telepon;
-    
-    public void Customer(){}
 
-////////////////////////////SETTER & GETTER///////////////////
+    public Customer() {
+    }
+    
+    public Customer(String kode, String nama, String nomor_telepon) {
+        this.kode_customer = kode;
+        this.nama_customer = nama;
+        this.nomor_telepon = nomor_telepon;
+    }
+
     public String getKode_customer() {
         return kode_customer;
     }
@@ -40,19 +35,11 @@ public class Customer {
     public void setNomor_telepon(String nomor_telepon) {
         this.nomor_telepon = nomor_telepon;
     }
-//////////////////////////////////////////////////////////////
-// METHOD    
-    public void Customer(String kode, String nama,String nomor_telepon)
-    {
-        this.kode_customer = kode;
-        this.nama_customer = nama;
-        this.nomor_telepon = nomor_telepon;                
-    }
-    
-    public void getInfo()
-    {
-        System.out.println("Kode \t\t : "+getKode_customer());
-        System.out.println("Customer atas nama\t : " + getNama_customer()   );
-        System.out.println("Kontak Person \t : "+ getNomor_telepon());
+
+    public void getInfo() {
+        System.out.println("Kode \t\t : " + getKode_customer());
+        System.out.println("Nama Customer \t : " + getNama_customer());
+        System.out.println("Kontak Person \t : " + getNomor_telepon());
+        System.out.println("-----------------------------------------");
     }
 }
