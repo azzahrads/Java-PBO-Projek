@@ -1,23 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package oop.CycleWork;
-
-/**
- *
- * @author user
- */
-public class Pegawai {
-    ///////// ATTRIBUT /////////
+class Pegawai {
     private String kode_pegawai;
     private String nama_pegawai;
     private String nomor_telepon;
     private String jabatan;
-    
-    public Pegawai(){}
-    ////////////////////////////SETTER & GETTER///////////////////
+
+    public Pegawai(String kode_pegawai, String nama_pegawai, String nomor_telepon, String jabatan) {
+        this.kode_pegawai = kode_pegawai;
+        this.nama_pegawai = nama_pegawai;
+        this.nomor_telepon = nomor_telepon;
+        this.jabatan = jabatan;
+    }
 
     public String getKode_pegawai() {
         return kode_pegawai;
@@ -50,16 +42,11 @@ public class Pegawai {
     public void setJabatan(String jabatan) {
         this.jabatan = jabatan;
     }
-    //////////////////////////////////////////////////////
-    
-    public void Melayani()
-    {
-        
-    }        
-    public void getInfo()
-    {
-        System.out.println("Kode \t\t : "+getKode_pegawai());
-        System.out.println("Pegawai atas nama\t : " + getNama_pegawai());
-        System.out.println("Kontak Person \t : "+ getNomor_telepon());
+
+    public void getInfo() {
+        System.out.println("Kode Pegawai \t : " + getKode_pegawai());
+        System.out.println("Nama Pegawai \t : " + getNama_pegawai());
+        System.out.println("Kontak Person \t : " + getNomor_telepon());
+        System.out.println("-----------------------------------------");
     }
 }
